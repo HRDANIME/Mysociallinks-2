@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrollbars if image is larger */
+    background-color: #000; /* Fallback background */
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.7); /* Slightly dim the background */
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    height: 100vh;
+    padding-right: 50px; /* Adjust as needed */
+    box-sizing: border-box;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between buttons */
+}
+
+.profile-button {
+    display: block;
+    background-color: rgba(30, 30, 30, 0.8); /* Darker, semi-transparent background */
+    color: #fff;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-width: 200px; /* Ensure buttons have a consistent minimum width */
+}
+
+.profile-button:hover {
+    background-color: rgba(50, 50, 50, 0.9); /* Slightly lighter on hover */
+    transform: translateY(-3px); /* Dynamic lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.profile-button:active {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
